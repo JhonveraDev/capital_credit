@@ -484,7 +484,7 @@ body.tt-m-menu-open #header.header-show-hide-on-scroll { /* disable hide/show he
 	z-index: 9;
 }
 #header #logo img {
-	max-height: 50px
+	max-height: 62px
 }
 
 #logo .logo-light {
@@ -1401,7 +1401,7 @@ body.header-transparent-on #tt-intro .full-height-vh {
 
 /* intro caption description */
 #tt-intro .intro-description {
-	margin: 15px auto 0 auto;
+	margin: 15px 0 0 0;
 	font-weight: normal;
 	color: #FFF;
 	text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
@@ -5243,8 +5243,8 @@ ul.sr-item-attr > li a:hover {
 }
 .price-box.price-box-featured .btn-price-box:hover {
 	color: #FFF;
-	background-color: #03afa6;
-	border-color: #03afa6;
+	background-color: #72c107;
+	border-color: #72c107;
 }
 
 
@@ -9450,8 +9450,8 @@ body.modal-open {
 .open > .dropdown-toggle.btn-primary:focus,
 .open > .dropdown-toggle.btn-primary:hover {
 	color: #FFF;
-	background-color: #03afa6;
-	border-color: #03afa6
+	background-color: #72c107;
+	border-color: #72c107
 }
 
 .btn-primary.btn-link {
@@ -9472,7 +9472,7 @@ body.modal-open {
 .open > .dropdown-toggle.btn-primary.btn-link.focus,
 .open > .dropdown-toggle.btn-primary.btn-link:focus,
 .open > .dropdown-toggle.btn-primary.btn-link:hover {
-	color: #03afa6;
+	color: #72c107;
 	text-decoration: none;
 }
 
@@ -9499,8 +9499,8 @@ body.modal-open {
 .open > .dropdown-toggle.btn-primary-bordered:focus,
 .open > .dropdown-toggle.btn-primary-bordered:hover {
 	color: #FFF;
-	background-color: #03afa6;
-	border-color: #03afa6
+	background-color: #72c107;
+	border-color: #72c107;
 }
 
 /* Button success */
