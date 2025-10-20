@@ -98,6 +98,38 @@
 
 <body id="body" class="animsition tt-boxed">
 
+  <!-- Start Whatsapp buttom -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="assets/css/whatsapp/whatsapp-chat-style.css">
+  <div class="nav-bottom">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <div class="popup-whatsapp fadeIn">
+      <div class="content-whatsapp -top">
+        <button type="button" class="closePopup">
+          <i class="material-icons icon-font-color">close</i>
+        </button>
+        <div class="content-chat">
+          <img src="assets/img/icons8-consulta-100.png" width="42">
+          <p style="margin-bottom: 0px !important;">Hola, ¿en qué podemos ayudarte?</p>
+        </div>
+      </div>
+      <div class="content-whatsapp -bottom">
+        <input class="whats-input" id="whats-in" type="text" placeholder="Agenda tu asesoría. 🏦" />
+        <button class="send-msPopup" id="send-btn" type="button">
+          <i class="material-icons icon-font-color--black">send</i>
+        </button>
+      </div>
+    </div>
+    <button type="button" id="whats-openPopup" class="whatsapp-button">
+      <div class="float" title="Whatsapp contact">
+        <img src="assets/img/whatsapp.svg" class="wtp-button" alt="Whatsapp contact" aria-hidden="true">
+      </div>
+    </button>
+    <div class="circle-anime"></div>
+  </div>
+  <script src="assets/js/whatsapp_contact_script.js"></script>
+  <!-- End Whatsapp buttom -->
+
   <!-- =================
 		//// Begin header //// 
 		======================
@@ -143,7 +175,7 @@
           <ul>
             <!-- Begin call to action button -->
             <li>
-              <a href="https://wa.me/573142685772" class="tt-tools-button" target="_blank">Whatsapp !</a>
+              <a href="https://wa.me/573244658525" class="tt-tools-button" target="_blank">Whatsapp !</a>
             </li>
             <!-- End call to action button -->
           </ul>
@@ -214,7 +246,7 @@
 
                 <!-- Column -->
                 <div class="col-lg-6 col-lg-height split-box-image no-padding bg-image"
-                  style="background-image: url(assets/img/misc/me-3.jpg); background-position: 50% 50%;">
+                  style="background-image: url(assets/img/misc/me-3.png); background-position: 50% 50%;">
 
                   <!-- Split box image height
 										============================
@@ -251,7 +283,8 @@
                     <div class="margin-top-30">
                       <p>Es un mecanismo de pago donde el cliente autoriza el descuento automático desde su nómina o
                         pensión para el pago del crédito.
-                        Se realiza mediante un convenio entre la entidad empleadora y CapitalCredit S.A.S., lo cual garantiza
+                        Se realiza mediante un convenio entre la entidad empleadora y CapitalCredit S.A.S., lo cual
+                        garantiza
                         seguridad, puntualidad y facilidad de pago.
                       </p>
                       <h4>Especialistas en crédito de libre inversión</h4>
@@ -265,8 +298,8 @@
                       </ul>
                     </div>
 
-                    <a href="contact.html" class="btn btn-primary margin-top-20">Contacto</a>
-                    <a href="categories-grid.html" class="btn btn-dark margin-top-20">Nosotros</a>
+                    <a href="contacto.html" class="btn btn-primary margin-top-20">Contacto</a>
+                    <a href="nosotros.html" class="btn btn-dark margin-top-20">Nosotros</a>
                   </div>
                   <!-- End split box content -->
 
@@ -358,11 +391,11 @@
 
             <!-- Begin carousel item 
 							========================= -->
-            <a href="gallery-single-grid.html" class="cc-item">
+            <div class="cc-item">
 
               <!-- cc image -->
               <div class="cc-image full-cover bg-image"
-                style="background-image: url(assets/img/gallery/gallery-list/auto-width/gallery-auto-width-7.jpg);">
+                style="background-image: url(assets/img/gallery/fopep.png);">
               </div>
 
               <!-- Begin caption 
@@ -371,20 +404,19 @@
 								* Size classes: "cc-caption-xs", "cc-caption-sm", "cc-caption-lg", "cc-caption-xlg", "cc-caption-xxlg".
 								-->
               <div class="cc-caption center max-width-400"> <!-- max width class is optional -->
-                <h2 class="cc-title">FOPEP</h2>
               </div>
               <!-- End caption -->
 
-            </a>
+            </div>
             <!-- End carousel item -->
 
             <!-- Begin carousel item 
 							========================= -->
-            <a href="gallery-single-grid.html" class="cc-item">
+            <div class="cc-item">
 
               <!-- cc image -->
               <div class="cc-image full-cover bg-image"
-                style="background-image: url(assets/img/gallery/gallery-list/auto-width/gallery-auto-width-8.jpg);">
+                style="background-image: url(assets/img/gallery/colpensiones.png);">
               </div>
 
               <!-- Begin caption 
@@ -393,20 +425,19 @@
 								* Size classes: "cc-caption-xs", "cc-caption-sm", "cc-caption-lg", "cc-caption-xlg", "cc-caption-xxlg".
 								-->
               <div class="cc-caption center max-width-400"> <!-- max width class is optional -->
-                <h2 class="cc-title">COLPENSIONES</h2>
               </div>
               <!-- End caption -->
 
-            </a>
+            </div>
             <!-- End carousel item -->
 
             <!-- Begin carousel item 
 							========================= -->
-            <a href="gallery-single-grid.html" class="cc-item">
+            <div class="cc-item">
 
               <!-- cc image -->
               <div class="cc-image full-cover bg-image"
-                style="background-image: url(assets/img/gallery/gallery-list/auto-width/gallery-auto-width-9.jpg);">
+                style="background-image: url(assets/img/gallery/fiduprevisora.png);">
               </div>
 
               <!-- Begin caption 
@@ -415,20 +446,19 @@
 								* Size classes: "cc-caption-xs", "cc-caption-sm", "cc-caption-lg", "cc-caption-xlg", "cc-caption-xxlg".
 								-->
               <div class="cc-caption center max-width-400">
-                <h2 class="cc-title">FIDUPREVISORA</h2>
               </div>
               <!-- End caption -->
 
-            </a>
+            </div>
             <!-- End carousel item -->
 
             <!-- Begin carousel item 
 							========================= -->
-            <a href="gallery-single-grid.html" class="cc-item">
+            <div class="cc-item">
 
               <!-- cc image -->
               <div class="cc-image full-cover bg-image"
-                style="background-image: url(assets/img/gallery/gallery-list/auto-width/gallery-auto-width-10.jpg);">
+                style="background-image: url(assets/img/gallery/porvenir.png);">
               </div>
 
               <!-- Begin caption 
@@ -437,20 +467,19 @@
 								* Size classes: "cc-caption-xs", "cc-caption-sm", "cc-caption-lg", "cc-caption-xlg", "cc-caption-xxlg".
 								-->
               <div class="cc-caption center max-width-400"> <!-- max width class is optional -->
-                <h2 class="cc-title">PROTECCIÓN</h2>
               </div>
               <!-- End caption -->
 
-            </a>
+            </div>
             <!-- End carousel item -->
 
             <!-- Begin carousel item 
 							========================= -->
-            <a href="gallery-single-grid.html" class="cc-item">
+            <div class="cc-item">
 
               <!-- cc image -->
               <div class="cc-image full-cover bg-image"
-                style="background-image: url(assets/img/gallery/gallery-list/auto-width/gallery-auto-width-11.jpg);">
+                style="background-image: url(assets/img/gallery/proteccion.png);">
               </div>
 
               <!-- Begin caption 
@@ -459,20 +488,19 @@
 								* Size classes: "cc-caption-xs", "cc-caption-sm", "cc-caption-lg", "cc-caption-xlg", "cc-caption-xxlg".
 								-->
               <div class="cc-caption center max-width-400"> <!-- max width class is optional -->
-                <h2 class="cc-title">PORVENIR</h2>
               </div>
               <!-- End caption -->
 
-            </a>
+            </div>
             <!-- End carousel item -->
 
             <!-- Begin carousel item 
 							========================= -->
-            <a href="gallery-single-grid.html" class="cc-item">
+            <div class="cc-item">
 
               <!-- cc image -->
               <div class="cc-image full-cover bg-image"
-                style="background-image: url(assets/img/gallery/gallery-list/auto-width/gallery-auto-width-12.jpg);">
+                style="background-image: url(assets/img/gallery/seguros-alfa.png);">
               </div>
 
               <!-- Begin caption 
@@ -481,20 +509,19 @@
 								* Size classes: "cc-caption-xs", "cc-caption-sm", "cc-caption-lg", "cc-caption-xlg", "cc-caption-xxlg".
 								-->
               <div class="cc-caption center max-width-400"> <!-- max width class is optional -->
-                <h2 class="cc-title">SEGUROS ALFA</h2>
               </div>
               <!-- End caption -->
 
-            </a>
+            </div>
             <!-- End carousel item -->
 
             <!-- Begin carousel item 
 							========================= -->
-            <a href="gallery-single-grid.html" class="cc-item">
+            <div class="cc-item">
 
               <!-- cc image -->
               <div class="cc-image full-cover bg-image"
-                style="background-image: url(assets/img/gallery/gallery-list/auto-width/gallery-auto-width-12.jpg);">
+                style="background-image: url(assets/img/gallery/cremil.png);">
               </div>
 
               <!-- Begin caption 
@@ -503,20 +530,19 @@
 								* Size classes: "cc-caption-xs", "cc-caption-sm", "cc-caption-lg", "cc-caption-xlg", "cc-caption-xxlg".
 								-->
               <div class="cc-caption center max-width-400"> <!-- max width class is optional -->
-                <h2 class="cc-title">CREMIL</h2>
               </div>
               <!-- End caption -->
 
-            </a>
+            </div>
             <!-- End carousel item -->
 
             <!-- Begin carousel item 
 							========================= -->
-            <a href="gallery-single-grid.html" class="cc-item">
+            <div href="gallery-single-grid.html" class="cc-item">
 
               <!-- cc image -->
               <div class="cc-image full-cover bg-image"
-                style="background-image: url(assets/img/gallery/gallery-list/auto-width/gallery-auto-width-12.jpg);">
+                style="background-image: url(assets/img/gallery/casur.png);">
               </div>
 
               <!-- Begin caption 
@@ -525,11 +551,11 @@
 								* Size classes: "cc-caption-xs", "cc-caption-sm", "cc-caption-lg", "cc-caption-xlg", "cc-caption-xxlg".
 								-->
               <div class="cc-caption center max-width-400"> <!-- max width class is optional -->
-                <h2 class="cc-title">CASUR</h2>
+
               </div>
               <!-- End caption -->
 
-            </a>
+            </div>
             <!-- End carousel item -->
 
           </div>
@@ -577,7 +603,8 @@
               <!-- Begin footer text -->
               <div class="footer-text">
                 <h4>CAPITAL CREDIT S.A.S.</h4>
-                CapitalCredit S.A.S. brinda soluciones financieras confiables, enfocadas en la calidad, la confianza y el bienestar de nuestros clientes.
+                CapitalCredit S.A.S. brinda soluciones financieras confiables, enfocadas en la calidad, la confianza y
+                el bienestar de nuestros clientes.
               </div>
               <!-- End footer text -->
 
