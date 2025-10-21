@@ -78,6 +78,7 @@ html, body {
 	margin: 0;
 	overflow-x: hidden;
 	overflow-y: auto;
+	scroll-behavior: smooth; 
 }
 body {
 	position: relative;
@@ -92,7 +93,7 @@ a {
 	color: rgba(26, 165, 221, 1);
 }
 a:hover, a:focus {
-	color: #1de2d9;
+	color: #72c107;
 	text-decoration: none;
 }
 a:focus {
@@ -10727,6 +10728,5 @@ body.tt-boxed #footer.footer-minimal .footer-container {
 @media (max-width: 600px) {
   .responsive-email {
     font-size: 12px;
-	color: red;
   }
 }

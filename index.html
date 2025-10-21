@@ -67,7 +67,7 @@
   <!-- <link rel="stylesheet" href="assets/css/color-skins/skin-red.css"> -->
   <!-- <link rel="stylesheet" href="assets/css/color-skins/skin-green.css"> -->
   <!-- <link rel="stylesheet" href="assets/css/color-skins/skin-blue.css"> -->
-  <!-- <link rel="stylesheet" href="assets/css/color-skins/skin-rgba(26, 165, 221, 1).css"> -->
+  <!-- <link rel="stylesheet" href="assets/css/color-skins/skin-orange.css"> -->
   <!-- <link rel="stylesheet" href="assets/css/color-skins/skin-purple.css"> -->
   <!-- <link rel="stylesheet" href="assets/css/color-skins/skin-pink.css"> -->
   <!-- <link rel="stylesheet" href="assets/css/color-skins/skin-brown.css"> -->
@@ -96,7 +96,7 @@
 	* Use class "tt-boxed" to enable page boxed layout globally (affects all elements containing class "tt-wrap").
 	-->
 
-<body id="body" class="animsition">
+<body id="body" class="animsition tt-boxed">
 
   <!-- Start Whatsapp buttom -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
@@ -140,21 +140,21 @@
 		* Use class "menu-align-right" to align menu to right.
 		* Use class "menu-align-center" to align menu to center (do not use with header classes!).
 		-->
-  <header id="header" class="menu-align-right">
+  <header id="header" class="header-show-hide-on-scroll menu-align-right">
 
     <!-- Begin header inner -->
-    <div class="header-inner tt-wrap" style="padding-left: 13%; padding-right: 13%;">
+    <div class="header-inner tt-wrap">
       <!-- add/remove class "tt-wrap" to enable/disable element boxed layout (class "tt-boxed" is required in <body> tag! ) -->
 
       <!-- Begin logo 
 				================ -->
       <div id="logo">
-        <a href="index.html" class="logo-dark"><img src="assets/img/logo-dark.png" alt="logo"></a>
-        <a href="index.html" class="logo-light"><img src="assets/img/logo-light.png" alt="logo"></a>
+        <a href="#tt-intro" class="logo-dark"><img src="assets/img/logo-dark.png" alt="logo"></a>
+        <a href="#tt-intro" class="logo-light"><img src="assets/img/logo-light.png" alt="logo"></a>
 
         <!-- for small screens -->
-        <a href="index.html" class="logo-dark-m"><img src="assets/img/logo-dark-m.png" alt="logo"></a>
-        <a href="index.html" class="logo-light-m"><img src="assets/img/logo-light-m.png" alt="logo"></a>
+        <a href="#tt-intro" class="logo-dark-m"><img src="assets/img/logo-dark-m.png" alt="logo"></a>
+        <a href="#tt-intro" class="logo-light-m"><img src="assets/img/logo-light-m.png" alt="logo"></a>
       </div>
       <!-- End logo -->
 
@@ -191,22 +191,19 @@
             <!-- Begin submenu (submenu master)
 							==================================== -->
             <li class="">
-              <a href="index.html">Inicio</a>
+              <a href="#tt-intro">Inicio</a>
             </li>
             <li>
-              <a href="credito-libranza.html">Créditos de Libranza</a>
+              <a href="#about-me-section">Créditos de Libranza</a>
             </li>
             <li>
-              <a href="nosotros.html">Nosotros</a>
+              <a href="#page-header">Nosotros</a>
             </li>
             <li>
-              <a href="propuesta-valor.html">Propuesta de Valor</a>
+              <a href="#gallery-list-section">Propuesta de Valor</a>
             </li>
             <li>
-              <a href="assets/documents/politica-de-privacidad.pdf" target="_blank">Políticas de Privacidad</a>
-            </li>
-            <li>
-              <a href="contacto.html">Contacto</a>
+              <a href="#contact-section">Contacto</a>
             </li>
             <!-- End submenu (sub-master) -->
           </ul> <!-- /.tt-menu-nav -->
@@ -231,96 +228,966 @@
     <!-- ==========================
 			///// Begin intro section /////
 			=========================== -->
-    <section id="tt-intro" class="image-intro">
-      <div class="tt-intro-inner full-height-vh tt-wrap bg-image"
-        style="background-image: url(assets/img/intro/intro-5.png); background-position: 50% 50%;">
+    <section id="tt-intro" class="slideshow-intro">
+      <div class="tt-intro-inner">
         <!-- add/remove class "tt-wrap" to enable/disable element boxed layout (class "tt-boxed" is required in <body> tag! ) -->
+        <div class="gl-carousel-wrap no-padding"> <!-- Optional: use class "no-padding" to disable paddings -->
 
-        <!-- Element cover -->
-        <div class="cover bg-transparent-2-dark"></div>
+          <!-- Begin content carousel (https://owlcarousel2.github.io/OwlCarousel2/)
+						====================================================================
+						* Use class "nav-outside" for outside nav (requires boxed layout).
+						* Use class "nav-outside-top" for outside top nav (requires enough space at the top of the carousel).
+						* Use class "nav-bottom-right" for bottom right nav.
+						* Use class "nav-rounded" for rounded nav.
+						* Use class "nav-light" to enable nav light style.
+						* Use class "dots-outside" for outside dots (requires enough space at the bottom of the carousel).
+						* Use class "dots-left", "dots-right" or "dots-center-right" to align dots.
+						* Use class "dots-rounded" for rounded dots.
+						* Use class "owl-mousewheel" to enable mousewheel support.
+						* Use class "cursor-grab" to enable cursor grab icon (no effect on links!).
+						* Use class "cc-hover-light", "cc-hover-dark" or "cc-hover-zoom" to enable carousel items hover effect.
+						* Use class "cc-height-1", "cc-height-2", "cc-height-3", "cc-height-4", "cc-height-5", "cc-height-6" or "cc-height-full" to set carousel height (do not use with data-autoheight="true"!!!).
+						* Use class "cc-height-m" to set full height for small screens (do not use with data-autoheight="true"!!!).
+						================================================================
+						* Available carousel data attributes:
+								data-items="5".......................(items visible on desktop)
+								data-tablet-landscape="4"............(items visible on mobiles)
+								data-tablet-portrait="3".............(items visible on mobiles)
+								data-mobile-landscape="2"............(items visible on tablets)
+								data-mobile-portrait="1".............(items visible on tablets)
+								data-loop="true".....................(true/false)
+								data-margin="10".....................(space between items)
+								data-center="true"...................(true/false)
+								data-start-position="0"..............(item start position)
+								data-animate-in="fadeIn".............(fade-in animation)
+								data-animate-out="fadeOut"...........(fade-out animation)
+								data-mouse-drag="false"..............(true/false)
+								data-touch-drag="false"..............(true/false)
+								data-autoheight="true"...............(true/false)
+								data-autoplay="true".................(true/false)
+								data-autoplay-timeout="5000".........(milliseconds)
+								data-autoplay-hover-pause="true".....(true/false)
+								data-autoplay-speed="800"............(milliseconds)
+								data-drag-end-speed="800"............(milliseconds)
+								data-nav="true"......................(true/false)
+								data-nav-speed="800".................(milliseconds)
+								data-dots="false"....................(true/false)
+								data-dots-speed="800"................(milliseconds)
+						-->
+          <div class="owl-carousel cc-height-5 cursor-grab dots-right bg-dark" data-items="1" data-loop="true"
+            data-nav="true" data-nav-speed="500" data-dots-speed="500" data-autoplay="true" data-autoplay-timeout="8000"
+            data-autoplay-speed="500" data-autoplay-hover-pause="true">
 
-        <!-- Begin intro caption 
-					=========================
-					* Position classes: "top-left", "top-center", "top-right", "center-left", "center", "center-right", "bottom-left", "bottom-center", "bottom-right". 
-					* Size classes: "intro-caption-xs", "intro-caption-sm", "intro-caption-lg", "intro-caption-xlg", "intro-caption-xxlg".
-					-->
-        <div class="intro-caption caption-animate intro-caption-xxlg center-left">
-          <h1 class="intro-title">CAPITALCREDIT S.A.S.</h1>
-          <h2 class="intro-subtitle">Revolución Neofinanciera</h2>
+            <!-- Begin carousel item 
+							========================= -->
+            <div class="cc-item">
 
-          <p class="intro-description max-width-650">
-            En <strong>CapitalCredit S.A.S.</strong>, brindamos soluciones financieras ágiles, <br>confiables y
-            personalizadas, orientadas al crecimiento y bienestar de nuestros clientes.
-          </p>
+              <!-- Element cover -->
+              <span class="cover bg-transparent-3-dark"></span>
 
-          <div class="margin-top-30">
-            <a href="https://wa.me/573244658525"
-              class="btn btn-primary margin-top-5 margin-right-10" target="_blank">Whatsapp</a>
-            <a href="credito-libranza.html" class="btn btn-white-bordered margin-top-5">Creditos de Libranzas</a>
+              <!-- cc image -->
+              <div class="cc-image bg-image"
+                style="background-image: url(assets/img/intro/intro-5.png); background-position: 50% 50%;">
+              </div>
+
+              <!-- Begin intro caption 
+              =========================
+              * Position classes: "top-left", "top-center", "top-right", "center-left", "center", "center-right", "bottom-left", "bottom-center", "bottom-right". 
+              * Size classes: "intro-caption-xs", "intro-caption-sm", "intro-caption-lg", "intro-caption-xlg", "intro-caption-xxlg".
+              -->
+              <div class="intro-caption caption-animate intro-caption-xxlg center-left">
+                <h1 class="intro-title">CAPITALCREDIT S.A.S.</h1>
+                <h2 class="intro-subtitle">Revolución Neofinanciera</h2>
+
+                <p class="intro-description max-width-650">
+                  En <strong>CapitalCredit S.A.S.</strong>, brindamos soluciones financieras ágiles, <br>confiables y
+                  personalizadas, orientadas al crecimiento y bienestar de nuestros clientes.
+                </p>
+
+                <div class="margin-top-30">
+                  <a href="https://wa.me/573244658525" class="btn btn-primary margin-top-5 margin-right-10"
+                    target="_blank">Whatsapp</a>
+                  <a href="#about-me-section" class="btn btn-white-bordered margin-top-5">Creditos de Libranzas</a>
+                </div>
+              </div>
+              <!-- End intro caption -->
+
+            </div>
+            <!-- End carousel item -->
           </div>
-        </div>
-        <!-- End intro caption -->
+          <!-- End content carousel -->
 
+        </div> <!-- /.gl-carousel-wrap -->
       </div> <!-- /.tt-intro-inner -->
     </section>
     <!-- End intro section -->
 
 
-    <!-- ============================================
-			///// Begin footer section (footer minimal) /////
-			=================================================
+    <!-- =============================
+			///// Begin about me section /////
+			============================== -->
+    <section id="about-me-section" class="about-me-simple margin-bottom-100 margin-top-30">
+      <div class="about-me-inner tt-wrap">
+        <!-- add/remove class "tt-wrap" to enable/disable element boxed layout (class "tt-boxed" is required in <body> tag! ) -->
+
+        <!-- ======================
+					///// Begin split box /////
+					based on: http://www.minimit.com/articles/solutions-tutorials/bootstrap-3-responsive-columns-of-same-height
+					======================= -->
+        <div class="split-box about-me">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="row-lg-height">
+
+                <!-- Column -->
+                <div class="col-lg-6 col-lg-height split-box-image no-padding bg-image"
+                  style="background-image: url(assets/img/misc/me-3.png); background-position: 50% 50%;">
+
+                  <!-- Split box image height
+										============================
+										* You can use prepared "padding-height-*" helper classes to set split box image height. Example: "padding-height-85" (useful if "split-box-content" contend/text is very short). Also you can use class "full-height-vh" for full height image. Find out "helper.css" file for more info. Note: class "sbi-height" is required.
+										-->
+                  <div class="sbi-height padding-height-100"></div>
+
+                </div> <!-- /.col -->
+
+                <!-- Column -->
+                <div class="col-lg-6 col-lg-height col-lg-middle no-padding">
+
+                  <!-- Begin split box content 
+										============================= 
+										* Use class "shifted-left" or "shifted-right" to enable shifted content (do not use for long content).
+										-->
+                  <div class="split-box-content sb-content-right">
+
+                    <!-- Begin tt-heading 
+											====================== 
+											* Use class "padding-on" to enable heading paddings (useful if you use tt-heading as stand alone element).
+											* Use class "text-center" or "text-right" to align tt-heading.
+											* Use classes "tt-heading-xs", "tt-heading-sm", "tt-heading-lg", "tt-heading-xlg" or "tt-heading-xxlg" to set tt-heading size.
+											-->
+                    <div class="tt-heading">
+                      <div class="tt-heading-inner">
+                        <h1 class="tt-heading-title">Créditos de Libranza</h1>
+                        <div class="tt-heading-subtitle">¿Qué es una Libranza?</div>
+                        <hr class="hr-short">
+                      </div> <!-- /.tt-heading-inner -->
+                    </div>
+                    <!-- End tt-heading -->
+
+                    <div class="margin-top-30">
+                      <p>Es un mecanismo de pago donde el cliente autoriza el descuento automático desde su nómina o
+                        pensión para el pago del crédito.
+                        Se realiza mediante un convenio entre la entidad empleadora y CapitalCredit S.A.S., lo cual
+                        garantiza
+                        seguridad, puntualidad y facilidad de pago.
+                      </p>
+                      <h4>Especialistas en crédito de libre inversión</h4>
+                      <p>en CapitalCredit S.A.S. evaluamos las necesidades reales de nuestros clientes para ofrecer
+                        soluciones financieras adaptadas a sus metas</p>
+                      <ul>
+                        <li>Plazo de financiación: <strong>hasta 144 meses</strong></li>
+                        <li><strong>Cuota fija</strong> durante toda la vigencia del crédito</li>
+                        <li><strong>Seguro de vida</strong> en caso de invalidez o fallecimiento</li>
+                        <li>Edad máxima del solicitante: <strong>85 años</strong></li>
+                      </ul>
+                    </div>
+                    <a href="#contact-section" class="btn btn-primary margin-top-20">Contacto</a>
+                  </div>
+                  <!-- End split box content -->
+
+                </div> <!-- /.col -->
+
+              </div> <!-- /.row-height -->
+            </div> <!-- /.row -->
+          </div> <!-- /.container -->
+        </div>
+        <!-- End split box -->
+
+      </div> <!-- /.about-me-inner -->
+    </section>
+    <!-- End about me section -->
+
+
+    <!-- ========================
+			///// Begin page header /////
+			=============================
+			* Use classes "ph-xs", "ph-sm", "ph-lg" or "ph-xlg" to set page header size.
+			* Use class "ph-center" or "ph-right" to align page header caption.
+			-->
+    <section id="page-header" class="margin-bottom-30">
+
+      <!-- Begin page header image 
+				============================= 
+				* Use class "parallax-bg-1" up to "parallax-bg-6" to enable background image parallax effect.
+				* Use class "fade-out-scroll-3" to enable fade out effect if page scroll.
+				* Use class "hide-ph-image" to hide page header image without removing the code.
+				-->
+      <div class="page-header-image bg-image" style="background-image: url(assets/img/misc/page-header-bg-4.png);">
+
+        <!-- Element cover 
+					===================
+					* You can use prepared background transparent classes depends on brightness of your page header image. More info: file "helper.css".
+					-->
+        <div class="cover bg-transparent-5-dark"></div>
+
+      </div>
+      <!-- End page header image -->
+
+      <!-- Begin page header inner -->
+      <div class="page-header-inner tt-wrap">
+
+        <!-- Begin page header caption 
+					===============================
+					* Use classes "ph-caption-xs", "ph-caption-sm", "ph-caption-lg" or "ph-caption-xlg" to set page header size.
+					* Use class "parallax-1" up to "parallax-6" to enable parallax effect.
+					* Use class "fade-out-scroll-1" up to "fade-out-scroll-6" to enable fade out effect if page scroll.
+					-->
+        <div class="page-header-caption ph-caption-lg">
+          <h1 class="page-header-title">Nosotros</h1>
+          <hr class="hr-short">
+
+          <!-- Use data attributes to set text maximum characters or words (example: data-max-characters="120" or data-max-words="40") -->
+          <div class="page-header-description" data-max-words="40">
+            Apoyamos tus metas financieras con un enfoque humano y diferencial.
+          </div>
+
+        </div>
+        <!-- End page header caption -->
+
+      </div>
+      <!-- End page header inner -->
+
+    </section>
+    <!-- End page header -->
+
+
+    <!-- =============================
+			///// Begin about me section /////
+			============================== -->
+    <section id="about-me-section" class="margin-bottom-100 margin-top-20">
+      <div class="about-me-inner tt-wrap">
+        <!-- add/remove class "tt-wrap" to enable/disable element boxed layout (class "tt-boxed" is required in <body> tag! ) -->
+
+        <!-- ======================
+					///// Begin split box /////
+					based on: http://www.minimit.com/articles/solutions-tutorials/bootstrap-3-responsive-columns-of-same-height
+					======================= -->
+        <div class="split-box about-me">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="row-lg-height">
+
+                <!-- Column -->
+                <div class="col-lg-6 col-lg-height split-box-image no-padding bg-image"
+                  style="background-image: url(assets/img/misc/me-1.png); background-position: 50% 50%;">
+
+                  <!-- Split box image height
+										============================
+										* You can use prepared "padding-height-*" helper classes to set split box image height. Example: "padding-height-85" (useful if "split-box-content" contend/text is very short). Also you can use class "full-height-vh" for full height image. Find out "helper.css" file for more info. Note: class "sbi-height" is required.
+										-->
+                  <div class="sbi-height padding-height-85"></div>
+
+                </div> <!-- /.col -->
+
+                <!-- Column -->
+                <div class="col-lg-6 col-lg-height col-lg-middle no-padding">
+
+                  <!-- Begin split box content 
+										============================= 
+										* Use class "shifted-left" or "shifted-right" to enable shifted content (do not use for long content).
+										-->
+                  <div class="split-box-content sb-content-right">
+
+                    <!-- Begin tt-heading 
+											====================== 
+											* Use class "padding-on" to enable heading paddings (useful if you use tt-heading as stand alone element).
+											* Use class "text-center" or "text-right" to align tt-heading.
+											* Use classes "tt-heading-xs", "tt-heading-sm", "tt-heading-lg", "tt-heading-xlg" or "tt-heading-xxlg" to set tt-heading size.
+											-->
+                    <div class="tt-heading">
+                      <div class="tt-heading-inner">
+                        <h1 class="tt-heading-title">¿Quiénes Somos?</h1>
+                        <div class="tt-heading-subtitle">Un poco sobre nosotros</div>
+                        <hr class="hr-short">
+                      </div> <!-- /.tt-heading-inner -->
+                    </div>
+                    <!-- End tt-heading -->
+
+                    <div class="margin-top-30">
+                      <p><strong>CapitalCredit S.A.S.</strong> es una empresa dedicada a brindar soluciones financieras
+                        confiables y oportunas, comprometida con mejorar la calidad de vida de nuestros clientes.
+                        Nuestro enfoque se basa en <strong>agilidad, calidad y calidez,</strong> respaldado por un
+                        equipo humano altamente competente y comprometido.
+                      </p>
+                    </div>
+                  </div>
+                  <!-- End split box content -->
+
+                </div> <!-- /.col -->
+
+              </div> <!-- /.row-height -->
+            </div> <!-- /.row -->
+          </div> <!-- /.container -->
+        </div>
+        <!-- End split box -->
+
+        <!-- ======================
+					///// Begin split box /////
+					based on: http://www.minimit.com/articles/solutions-tutorials/bootstrap-3-responsive-columns-of-same-height
+					======================= -->
+        <div class="split-box what-i-do marginb">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="row-lg-height">
+
+                <!-- Column -->
+                <div class="col-lg-6 col-lg-push-6 col-lg-height split-box-image no-padding bg-image"
+                  style="background-image: url(assets/img/misc/me-2.png); background-position: 50% 50%;">
+
+                  <!-- Split box image height
+										============================
+										* You can use prepared "padding-height-*" helper classes to set split box image height. Example: "padding-height-85" (useful if "split-box-content" contend/text is very short). Also you can use class "full-height-vh" for full height image. Find out "helper.css" file for more info. Note: class "sbi-height" is required.
+										-->
+                  <div class="sbi-height padding-height-85"></div>
+
+                </div> <!-- /.col -->
+
+                <!-- Column -->
+                <div class="col-lg-6 col-lg-pull-6 col-lg-height col-lg-middle no-padding">
+
+                  <!-- Begin split box content 
+										============================= 
+										* Use class "shifted-left" or "shifted-right" to enable shifted content (do not use for long content).
+										-->
+                  <div class="split-box-content sb-content-left">
+
+                    <!-- Begin tt-heading 
+											====================== 
+											* Use class "padding-on" to enable heading paddings (useful if you use tt-heading as stand alone element).
+											* Use class "text-center" or "text-right" to align tt-heading.
+											* Use classes "tt-heading-xs", "tt-heading-sm", "tt-heading-lg", "tt-heading-xlg" or "tt-heading-xxlg" to set tt-heading size.
+											-->
+                    <div class="tt-heading">
+                      <div class="tt-heading-inner">
+                        <h1 class="tt-heading-title">Nuestros Objetivos</h1>
+                        <div class="tt-heading-subtitle">Impulsando tu futuro con confianza y transparencia</div>
+                        <hr class="hr-short">
+                      </div> <!-- /.tt-heading-inner -->
+                    </div>
+                    <!-- End tt-heading -->
+
+                    <div class="margin-top-30">
+                      <h4>Misión</h4>
+                      <p>
+                        Facilitar soluciones financieras que mejoren y maximicen la calidad de vida de nuestros
+                        clientes, brindando un servicio ágil, cálido y eficiente.
+                      </p>
+                      <h4>Visión</h4>
+                      <p>
+                        Ser reconocidos como una empresa líder en soluciones financieras, destacándose por nuestra
+                        <strong>transparencia, honestidad y compromiso,</strong> generando confianza y seguridad en cada
+                        cliente.
+                      </p>
+                    </div>
+                  </div>
+                  <!-- End split box content -->
+
+                </div> <!-- /.col -->
+
+              </div> <!-- /.row-height -->
+            </div> <!-- /.row -->
+          </div> <!-- /.container -->
+        </div>
+        <!-- End split box -->
+
+        <!-- ======================
+					///// Begin split box /////
+					based on: http://www.minimit.com/articles/solutions-tutorials/bootstrap-3-responsive-columns-of-same-height
+					======================= -->
+        <div class="split-box about-me">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="row-lg-height">
+
+                <!-- Column -->
+                <div class="col-lg-6 col-lg-height split-box-image no-padding bg-image"
+                  style="background-image: url(assets/img/misc/me-4.png); background-position: 50% 50%;">
+
+                  <!-- Split box image height
+										============================
+										* You can use prepared "padding-height-*" helper classes to set split box image height. Example: "padding-height-85" (useful if "split-box-content" contend/text is very short). Also you can use class "full-height-vh" for full height image. Find out "helper.css" file for more info. Note: class "sbi-height" is required.
+										-->
+                  <div class="sbi-height padding-height-85"></div>
+
+                </div> <!-- /.col -->
+
+                <!-- Column -->
+                <div class="col-lg-6 col-lg-height col-lg-middle no-padding">
+
+                  <!-- Begin split box content 
+										============================= 
+										* Use class "shifted-left" or "shifted-right" to enable shifted content (do not use for long content).
+										-->
+                  <div class="split-box-content sb-content-right">
+
+                    <!-- Begin tt-heading 
+											====================== 
+											* Use class "padding-on" to enable heading paddings (useful if you use tt-heading as stand alone element).
+											* Use class "text-center" or "text-right" to align tt-heading.
+											* Use classes "tt-heading-xs", "tt-heading-sm", "tt-heading-lg", "tt-heading-xlg" or "tt-heading-xxlg" to set tt-heading size.
+											-->
+                    <div class="tt-heading">
+                      <div class="tt-heading-inner">
+                        <h1 class="tt-heading-title">Comprometidos con la Excelencia</h1>
+                        <div class="tt-heading-subtitle">Ofrecemos soluciones financieras que inspiran confianza y dejan
+                          huella.</div>
+                        <hr class="hr-short">
+                      </div> <!-- /.tt-heading-inner -->
+                    </div>
+                    <!-- End tt-heading -->
+
+                    <div class="margin-top-30">
+                      <ul>
+                        <li>Ofrecer servicios con excelencia, que permanezcan en la mente del cliente como sinónimo de
+                          <strong>buen servicio.</strong>
+                        </li>
+                        <li>Brindar apoyo integral, dentro del alcance de nuestras capacidades.</li>
+                        <li>Satisfacer necesidades financieras con un enfoque diferencial y humano.</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <!-- End split box content -->
+
+                </div> <!-- /.col -->
+
+              </div> <!-- /.row-height -->
+            </div> <!-- /.row -->
+          </div> <!-- /.container -->
+        </div>
+        <!-- End split box -->
+
+      </div> <!-- /.about-me-inner -->
+    </section>
+    <!-- End about me section -->
+
+
+    <!-- =================================
+			///// Begin gallery list section /////
+			================================== -->
+    <section id="gallery-list-section" class="gallery-list-carousel margin-bottom-100">
+      <div class="gallery-list-carousel-inner ">
+        <!-- add/remove class "tt-wrap" to enable/disable element boxed layout (class "tt-boxed" is required in <body> tag! ) -->
+        <div class="gl-carousel-wrap no-padding"> <!-- Optional: add class "no-padding" to disable paddings -->
+
+          <!-- Begin content carousel (https://owlcarousel2.github.io/OwlCarousel2/)
+						====================================================================
+						* Use class "nav-outside" for outside nav (requires boxed layout).
+						* Use class "nav-outside-top" for outside top nav (requires enough space at the top of the carousel).
+						* Use class "nav-bottom-right" for bottom right nav.
+						* Use class "nav-rounded" for rounded nav.
+						* Use class "nav-light" to enable nav light style.
+						* Use class "dots-outside" for outside dots (requires enough space at the bottom of the carousel).
+						* Use class "dots-left", "dots-right" or "dots-center-right" to align dots.
+						* Use class "dots-rounded" for rounded dots.
+						* Use class "owl-mousewheel" to enable mousewheel support.
+						* Use class "cursor-grab" to enable cursor grab icon (no effect on links!).
+						* Use class "cc-hover-light", "cc-hover-dark" or "cc-hover-zoom" to enable carousel items hover effect.
+						* Use class "cc-height-1", "cc-height-2", "cc-height-3", "cc-height-4", "cc-height-5", "cc-height-6" or "cc-height-full" to set carousel height (do not use with data-autoheight="true"!!!).
+						* Use class "cc-height-m" to set full height for small screens (do not use with data-autoheight="true"!!!).
+						================================================================
+						* Available carousel data attributes:
+								data-items="5".......................(items visible on desktop)
+								data-tablet-landscape="4"............(items visible on mobiles)
+								data-tablet-portrait="3".............(items visible on mobiles)
+								data-mobile-landscape="2"............(items visible on tablets)
+								data-mobile-portrait="1".............(items visible on tablets)
+								data-loop="true".....................(true/false)
+								data-margin="10".....................(space between items)
+								data-center="true"...................(true/false)
+								data-start-position="0"..............(item start position)
+								data-animate-in="fadeIn".............(fade-in animation)
+								data-animate-out="fadeOut"...........(fade-out animation)
+								data-mouse-drag="false"..............(true/false)
+								data-touch-drag="false"..............(true/false)
+								data-autoheight="true"...............(true/false)
+								data-autoplay="true".................(true/false)
+								data-autoplay-timeout="5000".........(milliseconds)
+								data-autoplay-hover-pause="true".....(true/false)
+								data-autoplay-speed="800"............(milliseconds)
+								data-drag-end-speed="800"............(milliseconds)
+								data-nav="true"......................(true/false)
+								data-nav-speed="800".................(milliseconds)
+								data-dots="false"....................(true/false)
+								data-dots-speed="800"................(milliseconds)
+						-->
+          <div class="owl-carousel cc-height-full owl-mousewheel nav-bottom-right cc-hover-dark cc-hover-zoom"
+            data-items="4" data-dots="false" data-nav="true" data-nav-speed="800" data-autoplay="true"
+            data-autoplay-timeout="8000" data-autoplay-speed="800" data-autoplay-hover-pause="true"
+            data-tablet-landscape="3" data-tablet-portrait="3" data-mobile-landscape="2" data-mobile-portrait="1">
+
+            <!-- Begin carousel item 
+							========================= -->
+            <div class="cc-item">
+
+              <!-- cc image -->
+              <div class="cc-image bg-image"
+                style="background-image: url(assets/img/gallery/gallery-list/striped/gallery-striped-8.png); background-position: 50% 50%;">
+              </div>
+
+              <!-- Begin caption 
+								===================
+								* Position classes: "top-left", "top-center", "top-right", "center-left", "center", "center-right", "bottom-left", "bottom-center", "bottom-right". 
+								* Size classes: "cc-caption-xs", "cc-caption-sm", "cc-caption-lg", "cc-caption-xlg", "cc-caption-xxlg".
+								-->
+              <div class="cc-caption cc-caption-lg bottom-left"> <!-- max width class is optional -->
+                <div class="cc-category"><span><i>"Soluciones rápidas, sin complicaciones."</i></span></div>
+                <h2 class="cc-title">Agilidad</h2>
+                <p style="color: white; margin-top: 20px;">En CapitalCredit S.A.S., significa que nuestros procesos son
+                  dinámicos, sin demoras innecesarias y orientados a brindar soluciones financieras en el menor tiempo
+                  posible.</p>
+              </div>
+              <!-- End caption -->
+
+            </div>
+            <!-- End carousel item -->
+
+            <!-- Begin carousel item 
+							========================= -->
+            <div class="cc-item">
+
+              <!-- cc image -->
+              <div class="cc-image bg-image"
+                style="background-image: url(assets/img/gallery/gallery-list/striped/gallery-striped-9.png); background-position: 50% 50%;">
+              </div>
+
+              <!-- Begin caption 
+								===================
+								* Position classes: "top-left", "top-center", "top-right", "center-left", "center", "center-right", "bottom-left", "bottom-center", "bottom-right". 
+								* Size classes: "cc-caption-xs", "cc-caption-sm", "cc-caption-lg", "cc-caption-xlg", "cc-caption-xxlg".
+								-->
+              <div class="cc-caption cc-caption-lg bottom-left"> <!-- max width class is optional -->
+                <div class="cc-category"><span><i>"Hacemos las cosas bien, desde el principio hasta el
+                      final."</i></span></div>
+                <h2 class="cc-title">Calidad</h2>
+                <p style="color: white; margin-top: 20px;">Nos aseguramos de que cada cliente reciba una atención
+                  cuidadosa, precisa y profesional, cumpliendo con altos estándares.</p>
+              </div>
+              <!-- End caption -->
+
+            </div>
+            <!-- End carousel item -->
+
+            <!-- Begin carousel item 
+							========================= -->
+            <div class="cc-item">
+
+              <!-- cc image -->
+              <div class="cc-image bg-image"
+                style="background-image: url(assets/img/gallery/gallery-list/striped/gallery-striped-10.png); background-position: 50% 50%;">
+              </div>
+
+              <!-- Begin caption 
+								===================
+								* Position classes: "top-left", "top-center", "top-right", "center-left", "center", "center-right", "bottom-left", "bottom-center", "bottom-right". 
+								* Size classes: "cc-caption-xs", "cc-caption-sm", "cc-caption-lg", "cc-caption-xlg", "cc-caption-xxlg".
+								-->
+              <div class="cc-caption cc-caption-lg bottom-left"> <!-- max width class is optional -->
+                <div class="cc-category"><span><i>"Más que una empresa financiera, somos personas ayudando a
+                      personas."</i></span></div>
+                <h2 class="cc-title">Calidez</h2>
+                <p style="color: white; margin-top: 20px;">Cada interacción está marcada por el respeto, la cercanía y
+                  el deseo genuino de ayudar.</p>
+              </div>
+              <!-- End caption -->
+
+            </div>
+            <!-- End carousel item -->
+
+            <!-- Begin carousel item 
+							========================= -->
+            <div class="cc-item">
+
+              <!-- cc image -->
+              <div class="cc-image bg-image"
+                style="background-image: url(assets/img/gallery/gallery-list/striped/gallery-striped-11.png); background-position: 50% 50%;">
+              </div>
+
+              <!-- Begin caption 
+								===================
+								* Position classes: "top-left", "top-center", "top-right", "center-left", "center", "center-right", "bottom-left", "bottom-center", "bottom-right". 
+								* Size classes: "cc-caption-xs", "cc-caption-sm", "cc-caption-lg", "cc-caption-xlg", "cc-caption-xxlg".
+								-->
+              <div class="cc-caption cc-caption-lg bottom-left"> <!-- max width class is optional -->
+                <div class="cc-category"><span><i>"Decimos las cosas como son, sin letras pequeñas."</i></span></div>
+                <h2 class="cc-title">Transparencia</h2>
+                <p style="color: white; margin-top: 20px;">En CapitalCredit S.A.S., significa ofrecer información clara
+                  y
+                  completa sobre nuestros servicios y condiciones, para que el cliente siempre sepa qué firma y qué
+                  recibe.</p>
+              </div>
+              <!-- End caption -->
+
+            </div>
+            <!-- End carousel item -->
+
+            <!-- Begin carousel item 
+							========================= -->
+            <div class="cc-item">
+
+              <!-- cc image -->
+              <div class="cc-image bg-image"
+                style="background-image: url(assets/img/gallery/gallery-list/striped/gallery-striped-5.png); background-position: 50% 50%;">
+              </div>
+
+              <!-- Begin caption 
+								===================
+								* Position classes: "top-left", "top-center", "top-right", "center-left", "center", "center-right", "bottom-left", "bottom-center", "bottom-right". 
+								* Size classes: "cc-caption-xs", "cc-caption-sm", "cc-caption-lg", "cc-caption-xlg", "cc-caption-xxlg".
+								-->
+              <div class="cc-caption cc-caption-lg bottom-left"> <!-- max width class is optional -->
+                <div class="cc-category"><span><i>"Hacemos lo correcto, siempre."</i></span></div>
+                <h2 class="cc-title">Honestidad</h2>
+                <p style="color: white; margin-top: 20px;">Somos fieles a nuestros principios y actuamos con integridad,
+                  incluso cuando nadie nos está observando.</p>
+              </div>
+              <!-- End caption -->
+
+            </div>
+            <!-- End carousel item -->
+
+            <!-- Begin carousel item 
+							========================= -->
+            <div class="cc-item">
+
+              <!-- cc image -->
+              <div class="cc-image bg-image"
+                style="background-image: url(assets/img/gallery/gallery-list/striped/gallery-striped-6.png); background-position: 50% 50%;">
+              </div>
+
+              <!-- Begin caption 
+								===================
+								* Position classes: "top-left", "top-center", "top-right", "center-left", "center", "center-right", "bottom-left", "bottom-center", "bottom-right". 
+								* Size classes: "cc-caption-xs", "cc-caption-sm", "cc-caption-lg", "cc-caption-xlg", "cc-caption-xxlg".
+								-->
+              <div class="cc-caption cc-caption-lg bottom-left"> <!-- max width class is optional -->
+                <div class="cc-category"><span><i>"Sumamos esfuerzos para multiplicar soluciones."</i></span></div>
+                <h2 class="cc-title">Colaboración</h2>
+                <p style="color: white; margin-top: 20px;">Valoramos la participación activa de cada persona (cliente,
+                  empleado o aliado), entendiendo que juntos logramos mejores resultados.</p>
+              </div>
+              <!-- End caption -->
+
+            </div>
+            <!-- End carousel item -->
+          </div>
+          <!-- End content carousel -->
+        </div> <!-- /.gl-carousel-wrap -->
+      </div> <!-- /.gallery-list-carousel-inner -->
+    </section>
+    <!-- End gallery list section -->
+
+
+    <!-- ============================
+			///// Begin contact section /////
+			============================= -->
+    <section id="contact-section">
+      <div class="contact-section-inner">
+        <!-- add/remove class "tt-wrap" to enable/disable element boxed layout (class "tt-boxed" is required in <body> tag! ) -->
+
+        <!-- ======================
+					///// Begin split box /////
+					based on: http://www.minimit.com/articles/solutions-tutorials/bootstrap-3-responsive-columns-of-same-height
+					======================= -->
+        <div class="split-box">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="row-lg-height full-height-vh">
+
+                <!-- Column -->
+                <div class="col-lg-6 col-lg-height col-lg-middle bg-image"
+                  style="background-image: url(assets/img/misc/contact-bg.png); background-position: 50% 50%;">
+
+                  <!-- Element cover -->
+                  <div class="cover bg-transparent-0-5-dark"></div>
+
+                  <!-- Begin split box content -->
+                  <div class="split-box-content text-left no-padding-left no-padding-right">
+
+                    <!-- Begin contact info -->
+                    <div class="contact-info-wrap">
+                      <div class="contact-info">
+                        <p><i class="fas fa-home"></i> Calle 57 n 7 11. Of. 1401 - Bogota</p>
+                        <p><i class="fas fa-phone"></i> Contacto: ( +57 ) 324 4658525 - 6656008</p>
+                        <p><i class="fas fa-envelope"></i> Correo Electrónico: <a
+                            href="mailto:capitalcredit2016@capitalcredit.com.co" target="_blank"
+                            class="responsive-email">capitalcredit2016@capitalcredit.com.co</a></p>
+                      </div>
+
+                      <!-- Begin social buttons -->
+                      <div class="social-buttons margin-top-20">
+                        <ul>
+                          <li><a href="https://www.facebook.com/themetorium"
+                              class="btn btn-social-min btn-default btn-rounded-full" title="Follow me on Facebook"
+                              target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                          <li><a href="https://twitter.com/Themetorium"
+                              class="btn btn-social-min btn-default btn-rounded-full" title="Follow me on Twitter"
+                              target="_blank"><i class="fab fa-twitter"></i></a></li>
+                          <li><a href="https://plus.google.com/+SiiliOnu"
+                              class="btn btn-social-min btn-default btn-rounded-full" title="Follow me on Google+"
+                              target="_blank"><i class="fab fa-google-plus-g"></i></a></li>
+                          <li><a href="https://www.pinterest.com/themetorium"
+                              class="btn btn-social-min btn-default btn-rounded-full" title="Follow me on Pinterest"
+                              target="_blank"><i class="fab fa-pinterest-p"></i></a></li>
+                          <li><a href="https://dribbble.com/Themetorium"
+                              class="btn btn-social-min btn-default btn-rounded-full" title="Follow me on Dribbble"
+                              target="_blank"><i class="fab fa-dribbble"></i></a></li>
+                        </ul>
+                      </div>
+                      <!-- End social buttons -->
+
+                    </div>
+                    <!-- End contact info -->
+
+                  </div>
+                  <!-- End split box content -->
+
+                </div> <!-- /.col -->
+
+                <!-- Column -->
+                <div class="col-lg-6 col-lg-height col-lg-middle no-padding">
+
+                  <!-- Begin split box content -->
+                  <div class="split-box-content">
+
+                    <!-- Begin contact form 
+											========================= -->
+                    <form id="contact-form">
+                      <div class="contact-form-inner text-left">
+
+                        <div class="contact-form-info">
+
+                          <!-- Begin tt-heading 
+														====================== 
+														* Use class "padding-on" to enable heading paddings (useful if you use tt-heading as stand alone element).
+														* Use class "text-center" or "text-right" to align tt-heading.
+														* Use classes "tt-heading-xs", "tt-heading-sm", "tt-heading-lg", "tt-heading-xlg" or "tt-heading-xxlg" to set tt-heading size.
+														-->
+                          <div class="tt-heading">
+                            <div class="tt-heading-inner">
+                              <h1 class="tt-heading-title">Contáctanos 📬</h1>
+                              <!-- <div class="tt-heading-subtitle">Subtitle Here</div> -->
+                              <hr class="hr-short">
+                            </div> <!-- /.tt-heading-inner -->
+                          </div>
+                          <!-- End tt-heading -->
+
+                          <div class="margin-top-30">
+                            <p>En CapitalCredit S.A.S estamos listos para ayudarte. Completa nuestro <strong>formulario
+                                de contacto</strong> y uno de nuestros asesores se comunicará contigo lo antes posible.
+                              Tu consulta es muy importante para nosotros.</p>
+                          </div>
+
+                        </div>
+
+                        <!-- Begin hidden required fields (https://github.com/agragregra/uniMail) -->
+                        <input type="hidden" name="project_name" value="yourwebsiteaddress.com">
+                        <!-- Change value to your site name -->
+                        <input type="hidden" name="admin_email" value="your@email.com">
+                        <!-- Change value to your valid email address (where a message will be sent) -->
+                        <input type="hidden" name="form_subject" value="Message from yourwebsiteaddress.com">
+                        <!-- Change value to your own message subject -->
+                        <!-- End Hidden Required Fields -->
+
+                        <div class="row">
+                          <div class="col-lg-6">
+                            <div class="form-group">
+                              <input type="text" class="form-control" name="name" placeholder="Tu Nombre" required>
+                            </div>
+                          </div>
+                          <div class="col-lg-6">
+                            <div class="form-group">
+                              <input type="email" class="form-control" name="email" placeholder="Tu Correo Electrónico"
+                                required>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-lg-12">
+                            <div class="form-group">
+                              <input type="text" class="form-control" name="subject" placeholder="Asunto" required>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-lg-12">
+                            <div class="form-group">
+                              <select class="form-control" name="option" required>
+                                <option value="" disabled selected>Selecciona una opción</option>
+                                <option value="asesoria">Asesoria</option>
+                                <option value="solicitud de credito">Solicitud de crédito</option>
+                                <option value="actualizacion de datos">Actualización de datos</option>
+                                <option value="felicitación">Felicitación</option>
+                                <option value="sugerencia">Sugerencia</option>
+                                <option value="sugerencia">Reclamo</option>
+                                <option value="otros">Otros</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-lg-12">
+                            <div class="form-group">
+                              <textarea class="form-control" name="message" rows="4" placeholder="Tu Mensaje"
+                                required></textarea>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-lg-12">
+                            <div class="form-group">
+                              <input type="checkbox" id="politicas" name="politicas" required>
+                              Acepto las <a href="assets/documents/politica-de-privacidad.pdf" target="_blank">POLÍTICA
+                                DE PRIVACIDAD Y PROTECCIÓN DE DATOS PERSONALES</a> de la empresa.
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="small text-gray"><em>* Todos los campos son obligatorios!</em></div>
+
+                      </div> <!-- /.contact-form-inner -->
+
+                      <div class="row">
+                        <div class="col-lg-12">
+                          <button type="submit" class="btn btn-primary btn-lg margin-top-40">Enviar Mensaje</button>
+                        </div>
+                      </div>
+                    </form>
+                    <!-- End contact form -->
+
+                  </div>
+                  <!-- End split box content -->
+
+                </div> <!-- /.col -->
+              </div> <!-- /.row-height -->
+            </div> <!-- /.row -->
+          </div> <!-- /.container -->
+        </div>
+        <!-- End split box -->
+
+      </div> <!-- /.contact-section-inner -->
+    </section>
+    <!-- End contact section -->
+
+
+
+    <!-- ===========================
+			///// Begin footer section /////
+			================================
 			* Use class "footer-dark" to enable dark footer.
 			* Use class "no-margin-top" if needed. 
 			-->
-    <section id="footer" class="footer-minimal no-margin-top bg-transparent">
+    <section id="footer" class="footer-dark no-margin-top"> <!-- margin class is optional -->
       <div class="footer-inner">
-        <div class="footer-container tt-wrap" style="padding-left: 13%; padding-right: 13%;">
+        <div class="footer-container tt-wrap">
           <div class="row">
-            <div class="col-md-6 col-md-push-6">
+            <div class="col-md-3">
 
-              <!-- Begin social buttons -->
-              <div class="social-buttons">
-                <ul>
-                  <li><a href="https://www.facebook.com/themetorium" class="btn btn-social-min btn-default btn-link"
-                      title="Follow me on Facebook" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-                  <li><a href="https://twitter.com/Themetorium" class="btn btn-social-min btn-default btn-link"
-                      title="Follow me on Twitter" target="_blank"><i class="fab fa-twitter"></i></a></li>
-                  <li><a href="https://plus.google.com/+SiiliOnu" class="btn btn-social-min btn-default btn-link"
-                      title="Follow me on Google+" target="_blank"><i class="fab fa-google-plus-g"></i></a></li>
-                  <li><a href="https://www.pinterest.com/themetorium" class="btn btn-social-min btn-default btn-link"
-                      title="Follow me on Pinterest" target="_blank"><i class="fab fa-pinterest-p"></i></a></li>
-                  <li><a href="https://dribbble.com/Themetorium" class="btn btn-social-min btn-default btn-link"
-                      title="Follow me on Dribbble" target="_blank"><i class="fab fa-dribbble"></i></a></li>
-                  <li><a href="contact.html" class="btn btn-social-min btn-default btn-link" title="Drop me a line"
-                      target="_blank"><i class="fas fa-envelope"></i></a></li>
-                </ul>
+              <!-- Begin footer logo -->
+              <div id="footer-logo">
+                <a href="#tt-intro" class="logo-dark"><img src="assets/img/logo-dark.png" alt="logo"
+                    style="width: 70%;"></a>
+                <a href="#tt-intro" class="logo-light"><img src="assets/img/logo-light.png" alt="logo"
+                    style="width: 70%;"></a>
+
+                <!-- for small screens -->
+                <a href="#tt-intro" class="logo-dark-m"><img src="assets/img/logo-dark-m.png" alt="logo"
+                    style="width: 70%;"></a>
+                <a href="#tt-intro" class="logo-light-m"><img src="assets/img/logo-light-m.png" alt="logo"
+                    style="width: 70%;"></a>
               </div>
-              <!-- End social buttons -->
+              <!-- End footer logo -->
 
             </div> <!-- /.col -->
 
-            <div class="col-md-6 col-md-pull-6">
+            <div class="col-md-5">
 
-              <!-- Begin footer copyright -->
-              <div class="footer-copyright">
-                <p>&copy; <strong>CAPITALCREDIT S.A.S.</strong> 2025 / Todos los Derechos Reservados</p>
-                <p>Diseñado por: <a href="index.html" target="_blank">Capitalcredit S.A.S.</a></p>
+              <!-- Begin footer text -->
+              <div class="footer-text">
+                <h4>CAPITAL CREDIT S.A.S.</h4>
+                CapitalCredit S.A.S. brinda soluciones financieras confiables, enfocadas en la calidad, la confianza y
+                el bienestar de nuestros clientes.
               </div>
-              <!-- End footer copyright -->
+              <!-- End footer text -->
 
+            </div> <!-- /.col -->
+
+            <div class="col-md-4">
+              <!-- Begin footer text -->
+              <div class="footer-text">
+                <h4>CAPITAL CREDIT S.A.S.</h4>
+                <p><i class="fas fa-home"></i> Calle 57 n 7 11. Of. 1401 - Bogota</p>
+                <p><i class="fas fa-phone"></i> Contacto: ( +57 ) 324 4658525 - 6656008</p>
+                <p><i class="fas fa-envelope"></i> Correo Electrónico: <a
+                    href="mailto:capitalcredit2016@capitalcredit.com.co" target="_blank"
+                    class="responsive-email">capitalcredit2016@capitalcredit.com.co</a></p>
+              </div>
+              <!-- End footer text -->
             </div> <!-- /.col -->
           </div> <!-- /.row -->
         </div> <!-- /.footer-container -->
+
+        <div class="footer-bottom">
+          <div class="footer-container tt-wrap">
+            <div class="row">
+              <div class="col-md-6 col-md-push-6">
+
+                <!-- Begin footer menu -->
+                <ul class="footer-menu">
+                  <li class="">
+                    <a href="#tt-intro">Inicio</a>
+                  </li>
+                  <li>
+                    <a href="#about-me-section">Créditos de Libranza</a>
+                  </li>
+                  <li>
+                    <a href="#page-header">Nosotros</a>
+                  </li>
+                  <li>
+                    <a href="#gallery-list-section">Propuesta de Valor</a>
+                  </li>
+                  <li>
+                    <a href="#contact-section">Contacto</a>
+                  </li>
+                </ul>
+                <!-- End footer menu -->
+
+              </div> <!-- /.col -->
+
+              <div class="col-md-6 col-md-pull-6">
+
+                <!-- Begin footer copyright -->
+                <div class="footer-copyright">
+                  <p>&copy; <strong>CAPITALCREDIT S.A.S.</strong> 2025 / Todos los Derechos Reservados</p>
+                  <p>Diseñado por: <a href="#tt-intro">Capitalcredit S.A.S.</a></p>
+                </div>
+                <!-- End footer copyright -->
+
+              </div> <!-- /.col -->
+
+            </div> <!-- /.row -->
+          </div> <!-- /.footer-container -->
+        </div> <!-- /.footer-bottom -->
+
       </div> <!-- /.footer-inner -->
+
+      <!-- Scroll to top button -->
+      <a href="#body" class="scrolltotop sm-scroll" title="Scroll to top"><i class="fas fa-chevron-up"></i></a>
+
     </section>
     <!-- End footer section -->
-
   </div>
   <!-- End body content -->
-
-  </div>
-  <!-- End body content -->
-
 
 
 
