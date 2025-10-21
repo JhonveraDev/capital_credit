@@ -231,7 +231,7 @@ body.tt-boxed .tt-wrap {
 	padding-right: 15px;
 }
 body.tt-boxed .tt-wrap {
-	max-width: 1440px;
+	max-width: 1300px;
 }
 
 
@@ -298,7 +298,7 @@ body.tt-boxed .tt-wrap {
 .tt-heading-title {
 	max-width: 800px;
 	margin: 0;
-	font-size: 32px;
+	font-size: 28px;
 }
 .tt-heading-subtitle {
 	max-width: 800px;
